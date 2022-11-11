@@ -35,6 +35,9 @@ export class AppComponent implements OnInit, AfterViewInit {
             End: new Point(500, 100 + i * 4),
             StrokeColor: new Annotations.Color(255, 0, 0, 1)
           });
+          if (withMeasures) {
+            this.setMeasures(lineAnnotation);
+          }
           annotations.push(lineAnnotation);
         }
         for (let i = 0; i < 250; ++i) {
